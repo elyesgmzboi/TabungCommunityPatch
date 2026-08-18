@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace OfflinePhoton
 {
-    [BepInPlugin("tabung.offline", "The Tabung Offline", "1.0.0")]
+    [BepInPlugin("tabung.offline", "TabungCommunityPatch", "2.0.0")]
     public sealed class Plugin : BaseUnityPlugin
     {
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -34,6 +34,7 @@ namespace OfflinePhoton
             ApplyPhotonConfig();
             new Harmony("tabung.offline").PatchAll(typeof(Plugin).Assembly);
             CreateDebugConsole();
+            CreateConfigMenu();
         }
 
         private static void ApplyPhotonConfig()
@@ -83,12 +84,23 @@ namespace OfflinePhoton
             }
         }
 
+        /// <summary>Public wrapper so ConfigMenu can re-apply config after the player edits it in-game.</summary>
+        internal static void ApplyPhotonConfigPublic() => ApplyPhotonConfig();
+
         private void CreateDebugConsole()
         {
             var go = new GameObject("OfflinePhoton Debug Console");
             DontDestroyOnLoad(go);
             go.hideFlags = HideFlags.HideAndDontSave;
             go.AddComponent<OfflinePhoton.Debug.DebugConsole>();
+        }
+
+        private void CreateConfigMenu()
+        {
+            var go = new GameObject("OfflinePhoton Config Menu");
+            DontDestroyOnLoad(go);
+            go.hideFlags = HideFlags.HideAndDontSave;
+            go.AddComponent<ConfigMenu>();
         }
     }
 }
