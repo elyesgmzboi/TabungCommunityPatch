@@ -1,4 +1,4 @@
-# TabungCommunityPatch v1.0
+# TabungCommunityPatch + PhotonRedirect v1.0
 
 ## Installing TabungCommunityPatch
 Requirements
@@ -8,7 +8,7 @@ Requirements
 ## Installation
 - Download the latest .DLL release from the GitHub Releases page.
 - Extract the archive.
-- Copy the OfflinePhoton.DLL file into your BepInEx\plugins folder for The Tabung.
+- Copy the `OfflinePhoton.DLL MonoMod.Backports.dll MonoMod.ILHelpers.dll MonoMod.RuntimeDetour.dll MonoMod.Utils.dll` files into your BepInEx\plugins folder for The Tabung.
 
 
 ## Required files in BepInEx/core
@@ -41,26 +41,29 @@ Leaves the game's normal multiplayer flow intact, while replacing the Photon App
 
 # Config file
 
-After the plugin runs once, edit:
+~~After the plugin runs once, edit:~~
 
-BepInEx/config/OfflinePhoton.cfg
+~~BepInEx/config/OfflinePhoton.cfg~~
 
-Important fields:
-- General = Mode
-- General = Nickname
-- Photon  = AppIdRealtime
-- Photon = AppIdVoice
-- Photon  = Region
+~~Important fields:~~
+~~- General = Mode~~
+~~- General = Nickname~~
+~~- Photon  = AppIdRealtime~~
+~~- Photon = AppIdVoice~~
+~~- Photon  = Region~~
 
 
 
-Example Online config:
-- Mode = Online
-- AppIdRealtime = your_photon_app_id_here
-- AppIdVoice = your_photon_app_id_here
-- Region = us
+~~Example Online config:~~
+~~- Mode = Online~~
+~~- AppIdRealtime = your_photon_app_id_here~~
+~~- AppIdVoice = your_photon_app_id_here~~
+~~- Region = us~~
 
-If AppIdRealtime is empty, the plugin falls back to Offline behavior.
+~~If AppIdRealtime is empty, the plugin falls back to Offline behavior.~~
+
+Run the game then press **F8**, you will be greeted with a menu that you will input your nickname, AppIdRealtime, AppIdVoice and Region.
+Make sure to press Verify on each AppId to check if the game reads that AppId correctly
 
 # What must be referenced in Visual Studio
 
