@@ -46,19 +46,19 @@ Leaves the game's normal multiplayer flow intact, while replacing the Photon App
 ~~BepInEx/config/OfflinePhoton.cfg~~
 
 ~~Important fields:~~
-~~- General = Mode~~
-~~- General = Nickname~~
-~~- Photon  = AppIdRealtime~~
-~~- Photon = AppIdVoice~~
-~~- Photon  = Region~~
+- ~~General = Mode~~
+- ~~General = Nickname~~
+- ~~Photon  = AppIdRealtime~~
+- ~~Photon = AppIdVoice~~
+- ~~Photon  = Region~~
 
 
 
 ~~Example Online config:~~
-~~- Mode = Online~~
-~~- AppIdRealtime = your_photon_app_id_here~~
-~~- AppIdVoice = your_photon_app_id_here~~
-~~- Region = us~~
+- ~~Mode = Online~~
+- ~~AppIdRealtime = your_photon_app_id_here~~
+- ~~AppIdVoice = your_photon_app_id_here~~
+- ~~Region = us~~
 
 ~~If AppIdRealtime is empty, the plugin falls back to Offline behavior.~~
 
