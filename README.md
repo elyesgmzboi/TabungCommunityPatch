@@ -65,6 +65,9 @@ Leaves the game's normal multiplayer flow intact, while replacing the Photon App
 Run the game then press **F8**, you will be greeted with a menu that you will input your nickname, AppIdRealtime, AppIdVoice and Region.
 Make sure to press Verify on each AppId to check if the game reads that AppId correctly
 
+<img width="319" height="367" alt="image" src="https://github.com/user-attachments/assets/f73f5449-fa2b-43f9-8abd-f0c80b374d99" />
+
+
 # What must be referenced in Visual Studio
 
 Game DLLs:
